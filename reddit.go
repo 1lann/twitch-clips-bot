@@ -109,8 +109,8 @@ func getClip(url string) (*clip, error) {
 func makeVideoDescription(c *clip, url string, post *redditproto.Link) string {
 	return "Automated mirror of: " + url +
 		"\nRecorded from " + c.displayName +
-		"'s Twitch channel: https://wwww.twitch.tv/" + c.username +
-		"\nDiscuss on Reddit: https://wwww.reddit.com" + post.GetPermalink() +
+		"'s Twitch channel: https://www.twitch.tv/" + c.username +
+		"\nDiscuss on Reddit: https://www.reddit.com" + post.GetPermalink() +
 		"\n\nThis video was uploaded automatically by a bot. " +
 		"This video is not owned by this automated channel or the creator " +
 		"of this automated channel. It is owned by the respective streamer whose " +
