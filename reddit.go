@@ -62,11 +62,11 @@ func getClipMetadata(url string) (*clip, error) {
 		return nil, err
 	}
 
+	defer resp.Body.Close()
+
 	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New("metadata: " + resp.Status)
 	}
-
-	defer resp.Body.Close()
 
 	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
@@ -98,6 +98,7 @@ func getClip(url string) (*clip, error) {
 	}
 
 	if resp.StatusCode != http.StatusOK {
+		resp.Body.Close()
 		return nil, errors.New("clip: " + resp.Status)
 	}
 
