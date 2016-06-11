@@ -119,16 +119,15 @@ func makeVideoDescription(c *clip, url string, post *redditproto.Link) string {
 		"\n\nThe source code of this bot can be found on GitHub: " +
 		"https://github.com/1lann/twitch-clips-bot" +
 		"\n\nEmail bot@chuie.io if you have any inquiries or issues. If you're " +
-		"the broadcaster of this clip, I'll be more than happy to take down " +
+		"the broadcaster of this clip, I'll be happy to take down " +
 		"this video if you request me to do so."
 }
 
 func makePostReply(id string) string {
 	return "[YouTube mirror](https://www.youtube.com/watch?v=" + id + ")\n\n" +
 		"^(I'm a bot. My creator is /u/1lann. Email me at bot@chuie.io. " +
-		"If you're the broadcaster of this clip, or a moderator of this " +
-		"subreddit, I'll be more than happy to take down this video if you " +
-		"request me to do so.) " +
+		"If you're the broadcaster of this clip, I'll be happy to take down " +
+		"this video if you request me to do so.) " +
 		"[^(Source on GitHub)](https://github.com/1lann/twitch-clips-bot)^."
 }
 
