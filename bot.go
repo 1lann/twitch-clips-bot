@@ -12,6 +12,6 @@ func main() {
 
 	for {
 		log.Println("graw error:", graw.Run("agent.protobuf", &twitchClipsBot{}, monitoredSubreddits...))
-		time.Sleep(time.Minute)
+		time.Sleep(time.Minute * 10)
 	}
 }
